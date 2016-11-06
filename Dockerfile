@@ -41,11 +41,12 @@ RUN CONFIG="\
 		zlib-dev \
 		linux-headers \
 		curl \
+		unzip \
 	&& curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
-	&& curl -fSL https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/master.zip -o nginx-rtmp.tar.gz \
+	&& curl -fSL https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/master.zip -o nginx-rtmp.zip \
 	&& mkdir -p /usr/src \
 	&& tar -zxC /usr/src -f nginx.tar.gz \
-	&& tar -zxC /usr/src -f nginx-rtmp.tar.gz \
+	&& unzip nginx-rtmp.tar.gz -d /usr/src \
 	&& rm nginx.tar.gz \
 	&& rm nginx-rtmp.tar.gz \
 	&& cd /usr/src/nginx-$NGINX_VERSION \

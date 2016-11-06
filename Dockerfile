@@ -88,8 +88,8 @@ RUN cd / \
     && mkdir /var/www \
     && chown nginx:nginx /var/www
 
-ADD frontend/* /var/www
-ADD nginx.conf /etc/nginx
+ADD frontend/* /var/www/
+ADD nginx.conf /etc/nginx/
 
 EXPOSE 80 1935
 

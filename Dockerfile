@@ -86,7 +86,7 @@ RUN CONFIG="\
 
 RUN cd / \
     && mkdir /var/www \
-    && chown nginx:nginx /var/www \
+    && chown nginx:nginx /var/www
 
 ADD frontend/* /var/www
 ADD nginx.conf /etc/nginx

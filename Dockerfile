@@ -46,7 +46,7 @@ RUN CONFIG="\
 	&& curl -fSL https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/master.zip -o nginx-rtmp.zip \
 	&& mkdir -p /usr/src \
 	&& tar -zxC /usr/src -f nginx.tar.gz \
-	&& unzip nginx-rtmp.tar.gz -d /usr/src \
+	&& unzip nginx-rtmp.zip -d /usr/src \
 	&& rm nginx.tar.gz \
 	&& rm nginx-rtmp.tar.gz \
 	&& cd /usr/src/nginx-$NGINX_VERSION \

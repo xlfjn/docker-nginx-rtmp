@@ -48,7 +48,7 @@ RUN CONFIG="\
 	&& tar -zxC /usr/src -f nginx.tar.gz \
 	&& unzip nginx-rtmp.zip -d /usr/src \
 	&& rm nginx.tar.gz \
-	&& rm nginx-rtmp.tar.gz \
+	&& rm nginx-rtmp.zip \
 	&& cd /usr/src/nginx-$NGINX_VERSION \
 	&& ./configure $CONFIG \
 	&& make -j$(getconf _NPROCESSORS_ONLN) \

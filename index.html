@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<script type="text/javascript" src="jwplayer.js"></script>
+<script type="text/javascript" src="jwplayer.html5.js"></script>
+</head>
+<body>
+<div id="player">This text will be replaced.</div>
+<script>
+function init() {
+  jwplayer("player").setup({
+    "file": "rtmp://11.9.17.204/live/flv:live.flv"
+  });
+}
+if (window.attachEvent) {
+  window.attachEvent("onload", init);
+} else {
+  window.addEventListener("load", init);
+}
+</script>
+</body>
+</html>
